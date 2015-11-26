@@ -27,6 +27,7 @@
 #define PACKETSIZE	64
 #define MAXHOSTS 255
 int *shmarr;
+int shmid;
 
 struct packet
 {
