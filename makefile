@@ -18,4 +18,4 @@ $(F3).o:$(F3).c
 	$(CC) $(FLAGS) $(F3).c -o $(F3).o
 
 clean:
-	rm *.o
+	rm -f $(F1).o $(F2).o $(F3).o $(PROG)
