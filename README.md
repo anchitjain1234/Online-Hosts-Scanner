@@ -29,4 +29,5 @@ Also **eth0** interface is used. Interface name could be changed in *utilities.c
 * Parent waits for all the child processes to exit and then print the host ip addresses which responded with ICMP reply.
 
 #### TODOS
-* Add compatibility for different interfaces also.
+* Add compatibility for generic IPV4 address.
+* IPV6 compatibility.
