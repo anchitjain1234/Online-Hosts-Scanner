@@ -61,7 +61,7 @@ void initialize(int *arr)
 }
 
 //get the host ip address.
-char* getip()
+char* getip(char *interface)
 {
     int fd;
     struct ifreq ifr;
@@ -69,7 +69,7 @@ char* getip()
     fd = socket(AF_INET, SOCK_DGRAM, 0);
 
     ifr.ifr_addr.sa_family = AF_INET;
-    strncpy(ifr.ifr_name, "eth0", IFNAMSIZ-1);
+    strncpy(ifr.ifr_name, interface, IFNAMSIZ-1);
     ioctl(fd, SIOCGIFADDR, &ifr);
     close(fd);
 

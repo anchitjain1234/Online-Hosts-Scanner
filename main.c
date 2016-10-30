@@ -10,6 +10,11 @@
 
 int main(int argc, char *argv[])
 {
+    if(argc < 2)
+    {
+        fprintf(stderr, "Invalid arguments. Usage: %s <interface>\n", argv[0]);
+        return -1;
+    }
     struct hostent *hname;
     struct sockaddr_in addr;
 
@@ -17,7 +22,7 @@ int main(int argc, char *argv[])
     struct protoent *proto;
     char ip_prefix[20],ipadd[20];
     //gets ip prefix for e.g. if ip is 172.17.14.10, below function will return 172.17.14.
-    getip_prefix(getip(),ip_prefix);
+    getip_prefix(getip(argv[1]),ip_prefix);
     int i,j;
 
     char str[3];
